@@ -4,8 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Penguin Forest</title>
+
+        <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
     </head>
     <body>
         <h1>Penguin Forest</h1>
     </body>
+
+
+    <script>
+        var socket = io('http://localhost:9092');
+        
+        var jsonObject = {userName: "Sprock",
+                          message: "It's a dog eat dog world out there!"};
+                        socket.emit('chatevent', jsonObject);
+    </script>
+
+    
 </html>
