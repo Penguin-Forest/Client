@@ -73,6 +73,15 @@
             container.rotation -= 0.01 * delta;
         });
 
+	window.addEventListener('resize', resize);
+
+	// Resize function window
+	function resize() {
+		// Resize the renderer
+		app.renderer.resize(window.innerWidth, window.innerHeight);
+	}
+
+	resize();
     </script>
 
     
