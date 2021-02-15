@@ -7,7 +7,17 @@
 
         <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
+	<style>
+		body {
+		  margin:0;
+		  padding:0;
+		  overflow:hidden;
+		}
 
+		canvas {
+		  display:block;
+		}
+	</style>
     </head>
     <body>
         <h1>Penguin Forest</h1>
@@ -39,7 +49,8 @@
         const texture = PIXI.Texture.from('https://pixijs.io/examples/examples/assets/bunny.png');
 
         // Create a 5x5 grid of bunnies
-        for (let i = 0; i < 25; i++) {
+        for (let i = 0; i < 25; i++) 
+	{
             const bunny = new PIXI.Sprite(texture);
             bunny.anchor.set(0.5);
             bunny.x = (i % 5) * 40;
